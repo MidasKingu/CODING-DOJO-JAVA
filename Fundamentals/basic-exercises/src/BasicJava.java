@@ -72,20 +72,27 @@ public class BasicJava {
         System.out.printf(Arrays.toString(array));
     }
     void minMaxAndAvg(int[] array) {
-        int max = array[0];
+        int max = 0;
         int min = array[0];
         int sum = 0;
-        int[] values = {max,min,sum/array.length};
-        for(int i = 1 ; i < array.length; i++) {
+        for(int i = 0 ; i < array.length; i++) {
             sum += array[i];
-            if(max < array[i]){
+            if(array[i] > max){
                 max = array[i];
             }
-            if (min > array[i]) {
+            if(array[i] < min) {
                 min = array[i];
             }
         }
-        System.out.println(Arrays.toString(values));
+        int[] newArray = {max,min,sum / array.length};
+        System.out.println(Arrays.toString(newArray));
+    }
+    void replaceValues(int[] array) {
+        for(int i = 0 ; i < array.length-1; i++) {
+            array[i] = array[ i + 1 ];
+        }
+        array[array.length-1] = 0;
+        System.out.println(Arrays.toString(array));
     }
 
 }
