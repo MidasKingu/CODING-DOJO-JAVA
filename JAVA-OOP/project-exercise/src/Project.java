@@ -11,9 +11,10 @@ public class Project {
     Project(String name) {
 
     }
-    Project(String name, String description) {
-        setNombre(name);
-        setDescription(description);
+    Project(String name, String description, Double initialCost) {
+        this.nombre = name;
+        this.description = description;
+        this.initialCost = initialCost;
     }
 
     public void setNombre (String nombre) {
