@@ -3,34 +3,38 @@ import java.util.List;
 
 public class BasicJava {
     void printFrom1To255() {
-        for(int i = 1 ; i <= 255; i++ ) {
+        for (int i = 1; i <= 255; i++) {
             System.out.println(i);
         }
     }
+
     void printOddFrom1To255() {
-        for(int i = 1 ; i <= 255; i++) {
-            if(i % 2 != 0){
+        for (int i = 1; i <= 255; i++) {
+            if (i % 2 != 0) {
                 System.out.println(i);
             }
         }
     }
+
     void printSum() {
         int acum = 0;
-        for(int i = 0; i <= 255; i++) {
+        for (int i = 0; i <= 255; i++) {
             acum += i;
-            System.out.println("Nuevo numero : " +i);
+            System.out.println("Nuevo numero : " + i);
             System.out.println("La suma es : " + acum);
         }
     }
-    void iterateArray (int[] array) {
+
+    void iterateArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
+
     void max(int[] array) {
         int max = array[0];
-        for(int i = 1 ; i < array.length; i++) {
-            if(max < array[i]){
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
                 max = array[i];
             }
         }
@@ -39,16 +43,16 @@ public class BasicJava {
 
     void average(int[] array) {
         int sum = 0;
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-        System.out.println(sum/array.length);
+        System.out.println(sum / array.length);
     }
 
     void greaterThanY(int[] array, int y) {
         int count = 0;
-        for(int i = 0; i < array.length; i++) {
-            if( array[i] > y) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > y) {
                 count++;
             }
         }
@@ -57,41 +61,44 @@ public class BasicJava {
 
     void valuesElevated(int[] array) {
 
-        for (int i = 0 ; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             array[i] = array[i] * array[i];
         }
         System.out.printf(Arrays.toString(array));
     }
+
     void replaceNegatives(int[] array) {
 
-        for (int i = 0 ; i < array.length; i++){
-            if(array[i] < 0) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
                 array[i] = 0;
             }
         }
         System.out.printf(Arrays.toString(array));
     }
+
     void minMaxAndAvg(int[] array) {
         int max = 0;
         int min = array[0];
         int sum = 0;
-        for(int i = 0 ; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
-            if(array[i] > max){
+            if (array[i] > max) {
                 max = array[i];
             }
-            if(array[i] < min) {
+            if (array[i] < min) {
                 min = array[i];
             }
         }
-        int[] newArray = {max,min,sum / array.length};
+        int[] newArray = { max, min, sum / array.length };
         System.out.println(Arrays.toString(newArray));
     }
+
     void replaceValues(int[] array) {
-        for(int i = 0 ; i < array.length-1; i++) {
-            array[i] = array[ i + 1 ];
+        for (int i = 0; i < array.length - 1; i++) {
+            array[i] = array[i + 1];
         }
-        array[array.length-1] = 0;
+        array[array.length - 1] = 0;
         System.out.println(Arrays.toString(array));
     }
 
